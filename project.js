@@ -18,8 +18,13 @@
  * sumOdds([1, 2, 3, 4, 5, 6, 7, 8, 9]) -> 25
  * sumOdds([3, 7, 8, 15, 2, 1, 13]) -> 39
  */
-function sumOdds(numbers) {
+const sumOdds = (numbers) => {
   // Your code here
+  // let count = 0;
+  // let sum = 0;
+  return numbers.filter((number) => number % 2 !==0, number + number);
+  // sum += count;
+  // return count;
 }
 
 // console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
@@ -129,11 +134,15 @@ function abbreviate(firstName, lastName) {
  * isUpperCase("JCREW") -> true
  *
  */
-function isUpperCase(string) {
+const isUpperCase = (string) => {
   // Your code here
+  return string.split("").toUpperCase() ? true : false;
 }
+// function isUpperCase(string) {
+//   // Your code here
+// }
 
-// console.log(isUpperCase("JCREW"));
+//console.log(isUpperCase("JCREw"));
 
 /**
  * elementInArray(numbers, x):
@@ -145,11 +154,16 @@ function isUpperCase(string) {
  * elementInArray([5, 6, 7], 8) -> false
  *
  */
-function elementInArray(numbers, x) {
-  // Your code here
-}
 
-// console.log(elementInArray([5, 6, 7], 8));
+const  elementInArray = (numbers, x) => {
+  // Your code here
+  return numbers.map((number) => number === x ? true : false);
+}
+// function elementInArray(numbers, x) {
+//   // Your code here
+// }
+
+console.log(elementInArray([5, 6, 7], 8));
 
 /**
  * reverseString(string):
@@ -161,11 +175,13 @@ function elementInArray(numbers, x) {
  * reverseString("CODED") -> "DEDOC"
  *
  */
-function reverseString(string) {
-  // Your code here
-}
+const reverseString = (string) => string.split("").reverse().join("");
 
-// console.log(reverseString("CODED"));
+// function reverseString(string) {
+//   // Your code here
+// }
+
+console.log(reverseString("CODED"));
 
 module.exports = {
   sumOdds,
